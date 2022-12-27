@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import ItemListContainer from './components/ItemListContainer'
+import NavBar from './components/NavBar'
+import images from './assets/images'
+import Footer from './components/Footer'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div>
+      <NavBar/>
+      <p className="fs-1 fw-bold text-center mt-3">
+      TechCommodity</p>
 
-export default App;
+      <ItemListContainer
+        img = {images}
+        saludo = "Bienvenidos a tu tienda"
+      />
+
+      <Footer/>
+
+      {/* <img src={primera}/> */}
+
+    </div>
+  )
+}
