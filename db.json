@@ -1,0 +1,85 @@
+{
+    "productos": [
+            {
+                "id": 1,
+                "nombre": "Iphone 14",
+                "imagen": "https://i.ibb.co/2ZxVJ8x/primera.jpg",
+                "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nisl nec neque laoreet imperdiet. Etiam volutpat luctus turpis, id ullamcorper orci dignissim a. Vivamus tempus, elit quis lobortis pretium, nisi nibh sodales libero, et vulputate tortor nunc nec ex. Nullam et felis felis. Nulla suscipit commodo lectus, ac luctus sem ultrices in. Nullam in sem sit amet tortor sagittis pellentesque. Etiam a iaculis tortor, id pulvinar nisl. Duis ut dictum justo, ut pellentesque ligula.",
+                "categoriaId": 1
+            },
+            {
+                "id": 2,
+                "nombre": "Poco X3 NFC",
+                "imagen": "https://i.ibb.co/Gt3CWjp/cuarta.jpg",
+                "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nisl nec neque laoreet imperdiet. Etiam volutpat luctus turpis, id ullamcorper orci dignissim a. Vivamus tempus, elit quis lobortis pretium, nisi nibh sodales libero, et vulputate tortor nunc nec ex. Nullam et felis felis. Nulla suscipit commodo lectus, ac luctus sem ultrices in. Nullam in sem sit amet tortor sagittis pellentesque. Etiam a iaculis tortor, id pulvinar nisl. Duis ut dictum justo, ut pellentesque ligula.",
+                "categoriaId": 1
+            },
+            {
+                "id": 3,
+                "nombre": "Galaxy S22",
+                "imagen": "https://i.ibb.co/H2XWrrK/quinta.jpg",
+                "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nisl nec neque laoreet imperdiet. Etiam volutpat luctus turpis, id ullamcorper orci dignissim a. Vivamus tempus, elit quis lobortis pretium, nisi nibh sodales libero, et vulputate tortor nunc nec ex. Nullam et felis felis. Nulla suscipit commodo lectus, ac luctus sem ultrices in. Nullam in sem sit amet tortor sagittis pellentesque. Etiam a iaculis tortor, id pulvinar nisl. Duis ut dictum justo, ut pellentesque ligula.",
+                "categoriaId": 1
+            },
+            {
+                "id": 4,
+                "nombre": "Apple airpods 3ra generación",
+                "imagen": "https://i.ibb.co/whT8y4R/segunda.jpg",
+                "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nisl nec neque laoreet imperdiet. Etiam volutpat luctus turpis, id ullamcorper orci dignissim a. Vivamus tempus, elit quis lobortis pretium, nisi nibh sodales libero, et vulputate tortor nunc nec ex. Nullam et felis felis. Nulla suscipit commodo lectus, ac luctus sem ultrices in. Nullam in sem sit amet tortor sagittis pellentesque. Etiam a iaculis tortor, id pulvinar nisl. Duis ut dictum justo, ut pellentesque ligula.",
+                "categoriaId": 2
+            },
+            {
+                "id": 5,
+                "nombre": "Audífonos Samsung",
+                "imagen": "https://i.ibb.co/0VNGfgS/sexta.jpg",
+                "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nisl nec neque laoreet imperdiet. Etiam volutpat luctus turpis, id ullamcorper orci dignissim a. Vivamus tempus, elit quis lobortis pretium, nisi nibh sodales libero, et vulputate tortor nunc nec ex. Nullam et felis felis. Nulla suscipit commodo lectus, ac luctus sem ultrices in. Nullam in sem sit amet tortor sagittis pellentesque. Etiam a iaculis tortor, id pulvinar nisl. Duis ut dictum justo, ut pellentesque ligula.",
+                "categoriaId": 2
+            },
+            {
+                "id": 6,
+                "nombre": "Audífonos Motorola",
+                "imagen": "https://i.ibb.co/59VfMHz/septima.jpg",
+                "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nisl nec neque laoreet imperdiet. Etiam volutpat luctus turpis, id ullamcorper orci dignissim a. Vivamus tempus, elit quis lobortis pretium, nisi nibh sodales libero, et vulputate tortor nunc nec ex. Nullam et felis felis. Nulla suscipit commodo lectus, ac luctus sem ultrices in. Nullam in sem sit amet tortor sagittis pellentesque. Etiam a iaculis tortor, id pulvinar nisl. Duis ut dictum justo, ut pellentesque ligula.",
+                "categoriaId": 2
+            },
+            {
+                "id": 7,
+                "nombre": "Lap-top Samsung",
+                "imagen": "https://i.ibb.co/9vFR22T/tercera.jpg",
+                "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nisl nec neque laoreet imperdiet. Etiam volutpat luctus turpis, id ullamcorper orci dignissim a. Vivamus tempus, elit quis lobortis pretium, nisi nibh sodales libero, et vulputate tortor nunc nec ex. Nullam et felis felis. Nulla suscipit commodo lectus, ac luctus sem ultrices in. Nullam in sem sit amet tortor sagittis pellentesque. Etiam a iaculis tortor, id pulvinar nisl. Duis ut dictum justo, ut pellentesque ligula.",
+                "categoriaId": 3
+            },
+            {
+                "id": 8,
+                "nombre": "MacBook Air",
+                "imagen": "https://i.ibb.co/2sCwyVY/octava.jpg",
+                "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nisl nec neque laoreet imperdiet. Etiam volutpat luctus turpis, id ullamcorper orci dignissim a. Vivamus tempus, elit quis lobortis pretium, nisi nibh sodales libero, et vulputate tortor nunc nec ex. Nullam et felis felis. Nulla suscipit commodo lectus, ac luctus sem ultrices in. Nullam in sem sit amet tortor sagittis pellentesque. Etiam a iaculis tortor, id pulvinar nisl. Duis ut dictum justo, ut pellentesque ligula.",
+                "categoriaId": 3
+            },
+            {
+                "id": 9,
+                "nombre": "Laptop HP",
+                "imagen": "https://i.ibb.co/Gx6hCKn/novena.jpg",
+                "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nisl nec neque laoreet imperdiet. Etiam volutpat luctus turpis, id ullamcorper orci dignissim a. Vivamus tempus, elit quis lobortis pretium, nisi nibh sodales libero, et vulputate tortor nunc nec ex. Nullam et felis felis. Nulla suscipit commodo lectus, ac luctus sem ultrices in. Nullam in sem sit amet tortor sagittis pellentesque. Etiam a iaculis tortor, id pulvinar nisl. Duis ut dictum justo, ut pellentesque ligula.",
+                "categoriaId": 3
+            }
+
+    ],
+    "categorias": [
+        {
+            "id": 1,
+            "nombreCategoria": "Celulares",
+            "imagen": "https://i.ibb.co/2ZxVJ8x/primera.jpg"
+        },
+        {
+            "id": 2,
+            "nombreCategoria": "Audifonos",
+            "imagen": "https://i.ibb.co/whT8y4R/segunda.jpg"
+        },
+        {
+            "id": 3,
+            "nombreCategoria": "Laptop",
+            "imagen": "https://i.ibb.co/9vFR22T/tercera.jpg"
+        }
+    ]
+}

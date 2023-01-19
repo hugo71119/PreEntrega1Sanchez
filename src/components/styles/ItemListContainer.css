@@ -1,3 +1,17 @@
 .tamano{
     width: 18rem;
 }
+.tamanoListContainer{
+    width: 29rem;
+}
+.contador{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.contador input{
+    max-width: 4rem;
+}
+.contador button{
+    width: 8rem;
+}

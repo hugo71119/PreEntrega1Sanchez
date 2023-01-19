@@ -1,4 +1,4 @@
-import iphone from '../img/primera.jpg'
+import iphone from '../../public/img/primera.jpg'
 import airpods from '../img/segunda.jpg'
 import laptop from '../img/tercera.jpg'
 
