@@ -1,18 +1,24 @@
-import { useLoaderData } from 'react-router'
-import { obtenerProducto } from '../assets/infor'
+import { collection, getDocs, getFirestore } from '@firebase/firestore'
+import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
+// import { useLoaderData } from 'react-router'
+// import { obtenerProducto } from '../assets/infor'
 import CategoriaFinal from './CategoriaFinal'
 
 
-export async function loader({params}) {
+// export async function loader({params}) {
 
-    const producto = await obtenerProducto(params.id)
-    return producto
-}
+//     const producto = await obtenerProducto(params.id)
+//     return producto
+// }
 
 export default function Categoria() {
 
-    const infoCelulares = useLoaderData()
-    console.log(infoCelulares)
+    const location = useLocation()
+    const locationId = +(location.pathname.split("/")[2])
+    // const infoCelulares = useLoaderData()
+
+    const [informacion, setInformacion] = useState([])
 
     // for (index; index < infoCelulares.length; index++) {
     //     if (infoCelulares[index].id <= infoCelulares[2].id) {
@@ -22,13 +28,23 @@ export default function Categoria() {
     // }
     // console.log(array)
 
+    useEffect(() => {
+        const querydb = getFirestore()
+        const queryCollection = collection(querydb, 'Productos')
+        getDocs(queryCollection)
+            .then(res => setInformacion(res.docs.map(producto => ({...producto.data()}))))
+    }, [])
+    console.log(informacion)
+    const nuevaInformacion = informacion.filter(info => info.categoriaId === locationId)
+    console.log(nuevaInformacion)
+
     return (
         <>
             <div className="container mt-5 mb-5">
 
                 <div className="row d-flex justify-content-center gap-5 mb-4">
 
-                        {infoCelulares.map(categoria => (
+                        {nuevaInformacion.map(categoria => (
                             <CategoriaFinal
                                 categoria={categoria}
                                 key={categoria.id}

@@ -1,19 +1,30 @@
-import { Outlet, useLoaderData, Link, useLocation } from "react-router-dom";
-import { obtenerCategorias } from "../assets/infor";
+import { useEffect, useState } from "react";
+import { Outlet, Link, useLocation } from "react-router-dom";
+import { collection, getDocs, getFirestore } from '@firebase/firestore'
+import { TiendaProvider } from '../context/TiendaProvider'
 import CartWidget from "./CartWidget";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 
-export function loader() {
-  const infoId = obtenerCategorias()
+// export function loader() {
+//   const infoId = obtenerCategorias()
 
-  return infoId
-}
+//   return infoId
+// }
 
 
 export default function Layout() {
-  const infoId = useLoaderData()
+  // const infoId = useLoaderData()
   const location = useLocation()
+
+  const [datos, setDatos] = useState([])
+
+  useEffect(() => {
+    const querydb = getFirestore()
+    const queryCollection = collection(querydb, 'categorias')
+    getDocs(queryCollection)
+        .then(res => setDatos(res.docs.map(producto => ({...producto.data()}))))
+  }, [])
 
   return (
     <>
@@ -28,14 +39,16 @@ export default function Layout() {
               <li className="nav-item">
                 <Link className={`${location.pathname === '/' ? 'text-dark' : 'text-light'} nav-link `} aria-current="page" to="/">Inicio</Link>
               </li>
-              {infoId.map(categoria => (
+              {datos.map(categoria => (
                 <NavBar
                   categoria={categoria}
                   key={categoria.id}
                 />
               ))}
               <li>
-                <CartWidget />
+                <TiendaProvider>
+                  <CartWidget />
+                </TiendaProvider>
               </li>
             </ul>
           </div>

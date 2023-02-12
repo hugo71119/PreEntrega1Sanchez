@@ -1,34 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App, {loader as AppLoader} from './App';
+import App from './App';
+import { TiendaProvider } from './context/TiendaProvider'
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Layout, {loader as layoutLoader} from './components/Layout';
-import Categoria, {loader as CategoriaLoader} from './components/Categoria';
-import ItemDetailContainer, {loader as ItemDetailLoader} from './components/ItemDetailContainer';
+import Layout from './components/Layout';
+import Categoria from './components/Categoria';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import './firebase/config'
+import Carrito from './components/Carrito';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout/>,
-    loader: layoutLoader,
     children:[
       {
         index: true,
-        element: <App />,
-        loader: AppLoader
+        element: <App />
       },
       {
         path: '/categoria/:id',
-        element: <Categoria/>,
-        loader: CategoriaLoader,
+        element: <Categoria/>
       },
       {
         path: '/producto/:id',
-        element: <ItemDetailContainer/>,
-        loader: ItemDetailLoader
+        element: 
+        <TiendaProvider>
+          <ItemDetailContainer/>
+        </TiendaProvider>
+      },
+      {
+        path: '/carrito',
+        element: 
+        <TiendaProvider>
+          <Carrito/>
+        </TiendaProvider>
       }
     ]
   }
