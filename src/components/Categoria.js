@@ -1,22 +1,12 @@
 import { collection, getDocs, getFirestore } from '@firebase/firestore'
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-// import { useLoaderData } from 'react-router'
-// import { obtenerProducto } from '../assets/infor'
 import CategoriaFinal from './CategoriaFinal'
-
-
-// export async function loader({params}) {
-
-//     const producto = await obtenerProducto(params.id)
-//     return producto
-// }
 
 export default function Categoria() {
 
     const location = useLocation()
     const locationId = +(location.pathname.split("/")[2])
-    // const infoCelulares = useLoaderData()
 
     const [informacion, setInformacion] = useState([])
 
@@ -34,9 +24,9 @@ export default function Categoria() {
         getDocs(queryCollection)
             .then(res => setInformacion(res.docs.map(producto => ({...producto.data()}))))
     }, [])
-    console.log(informacion)
+    // console.log(informacion)
     const nuevaInformacion = informacion.filter(info => info.categoriaId === locationId)
-    console.log(nuevaInformacion)
+    // console.log(nuevaInformacion)
 
     return (
         <>

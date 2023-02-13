@@ -18,9 +18,7 @@ export default function ItemDetailContainer() {
     getDocs(queryCollection)
         .then(res => setInformacion(res.docs.map(producto => ({...producto.data()}))))
   }, [])
-  console.log(informacion)
   const nuevaInformacion = informacion.filter(info => info.id === locationId)
-  console.log(nuevaInformacion)
 
 
   return (

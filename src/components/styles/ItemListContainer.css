@@ -15,3 +15,15 @@
 .contador button{
     width: 8rem;
 }
+.select {
+    display: inline;
+    width: auto;
+}
+@media (max-width: 768px) { 
+    .espacio{
+        margin-top: 5rem;
+    }
+}
+.sube {
+    position: sticky;
+}

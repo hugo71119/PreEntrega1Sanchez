@@ -1,19 +1,25 @@
 import { useState } from 'react'
 import useTienda from '../hooks/useTienda'
+import Swal from 'sweetalert2'
 
 export default function ItemDetailContainerFinal({info}) {
 
   const {agregarCarrito} = useTienda()
   const [cantidad, setCantidad] = useState(0)
-  const {imagen, nombre, descripcion, id} = info
+  const {imagen, nombre, descripcion, id, precio} = info
   // console.log(info)
 
 
   const handleSubmit = e => {
     e.preventDefault()
+    const form = document.querySelector('#formulario')
     
     if (cantidad < 1) {
-      alert('Debes seleccionar una cantidad')
+      Swal.fire({
+        icon: 'error',
+        title: 'Debes seleccionar una cantidad',
+        text: 'Algo esta mal!'
+      })
       return
     }
 
@@ -21,9 +27,20 @@ export default function ItemDetailContainerFinal({info}) {
       id,
       imagen,
       nombre,
-      cantidad
+      cantidad,
+      precio
     }
     agregarCarrito(productoSeleccionado)
+
+    Swal.fire({
+
+      position: 'top-end',
+      icon: 'success',
+      title: 'Agregado!',
+      showConfirmButton: false,
+      timer: 1200,
+    })
+    form.reset()
   }
 
   return (
@@ -36,10 +53,11 @@ export default function ItemDetailContainerFinal({info}) {
           <h3 className="text-center">{nombre}</h3>
           <p className="text-center mb-4">{descripcion}</p>
 
-          <form onSubmit={handleSubmit}>
+          <form id="formulario" onSubmit={handleSubmit}>
             <label>Cantidad</label>
 
             <select
+              className="form-select select mx-5"
               onChange={ e => setCantidad(parseInt(e.target.value)) }
               id="cantidad"
             >

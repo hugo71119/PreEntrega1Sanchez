@@ -6,15 +6,8 @@ import CartWidget from "./CartWidget";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 
-// export function loader() {
-//   const infoId = obtenerCategorias()
-
-//   return infoId
-// }
-
 
 export default function Layout() {
-  // const infoId = useLoaderData()
   const location = useLocation()
 
   const [datos, setDatos] = useState([])
