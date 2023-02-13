@@ -51,6 +51,7 @@ export default function ItemDetailContainerFinal({info}) {
           <img src={imagen} className="img-thumbnail tamanoListContainer col-12 col-md-4" alt={nombre}/>
         <div className="col-md-4">
           <h3 className="text-center">{nombre}</h3>
+          <p className="text-center fs-4 fw-bold">${precio} USD</p>
           <p className="text-center mb-4">{descripcion}</p>
 
           <form id="formulario" onSubmit={handleSubmit}>
